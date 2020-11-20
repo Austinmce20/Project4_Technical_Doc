@@ -1,0 +1,36 @@
+.page-wrap {
+    text-align: center;
+    margin: 0 auto;
+    padding: 1px, 1px, 1px 1px;
+}
+.page-wrap p {
+    margin: 0 auto;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+section{
+    max-width: 70vw;
+    margin: 0 auto;
+    text-align: left;
+    justify-content: center;
+    display: block;
+}
+code {
+    display: block;
+    text-align: left;
+    justify-content: left;
+    white-space: pre-wrap;
+    line-height: 1.25;
+    background-color: silver;
+    margin: 0 auto;
+    border-radius: 2px;
+    max-width: 40vw;
+    width: 30vw;
+}
+
+.keyword-style {
+    background: silver;
+    font-style: italic;
+    padding: 0px 5px 0px 4px;
+}

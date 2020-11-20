@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<div class="page-wrap">
+    <main id="main-doc">
+        
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Technical Documentation Page</title>
+            <link href="style.css" rel="stylesheet" type="text/css">
+        </head>
+        
+        <body>
+        <header>Python 3</header>
+        <section id="intro">
+            <h2>What is Python?</h2>
+            <p>Python is an interpreted, high-level, object-oriented programming language. Python shines at being able to create powerful, or simple, tools with fairly easy to read blocks of code known as objects. Python is both free and open-source, which has lead to users from all over the world creating a vast number of libraries and modules. This guide uses Python 3. </p>
+        </section>
+
+        <section id="pre-reqs">
+            <h2>Things you may want to know before going further</h2>
+            <p>Overall Python can be a very beginner-friendly language, but some basic computer skills/confidence will help a lot. You should also find a resource to teach you how to either set-up an IDE, or how to run commands in your terminal. To get the most out of this guide, write the code out in your chosen environment and run it.</p>
+        </section>
+
+        <section id="first-print">
+            <h2>Your first program</h2>
+            <p>Often when you learn a new language, one of the first things you'll learn how to do is output the statement: "Hello World!" In Python this is really easy to do.</p>
+            <code>
+                print("Hello World!")
+            </code>
+            <p>That's right, it's that easy to print in Python! Keep in mind, Python is a case-sensitive language; it can cause issues with your code if you use a capital in the wrong spot. Always double check your code!</p>
+        </section>
+
+        <section id="objects">
+            <h2>What does object-oriented mean</h2>
+            <p>Object-oriented languages are great, they allow you to take chunks of code or data, and store it in different forms. One of the simplest objects you'll use in Python is a variable. </p>
+            <code>
+                x = 600
+                print(x)
+            </code>
+            <p>In the above example, you saved 600 in the variable <span class="keyword-style">x</span> and called on with the <span class="keyword-style">print</span> function.</p>
+            <code>
+                x = 12
+                y = 14
+                z = x + y 
+                print(z)
+            </code>
+            <p>Just because you assign a variable to a value, doesn't mean it's stuck that way forever; you can re-assign variables later on in your code.</p>
+            <code>
+                x = 60
+                print(x)
+                x = 20
+                print(x)
+            </code>
+        </section>
+
+        <section id="data-types">
+            <h2>Data Types</h2>
+            <p>Variables can store different data types, and these different data types can be called upon differently and serve different purposes. Python, and programming in general, has many data types. This guide will focus on some of the more simple types. </p>
+            <ul>
+                <li>Strings: <span class="keyword-style">str</span>: Basic text. "Hello World!"</li>
+                <li>Integers: <span class="keyword-style">int</span>:  Whole numbers. 6</li>
+                <li>Floats: <span class="keyword-style">float</span>: Numbers including decimals. 6.14 </li>
+                <li>Boolean: <span class="keyword-style">bool</span>: True or False.</li>
+            </ul>
+        </section>
+
+        <section id="if-else">
+            <h2>If ... else statements</h2>
+            <p>Many languages have the <span class="keyword-style">if</span> ... <span class="keyword-style">else</span> statements, some in different forms or another. If statements are a way to execute code if certain conditions are present, or to create options depending on the usage. If statements use logical conditions to function 
+            </p>
+            <pre><code>
+                x = 3
+                if x == 3:
+                    print("True")
+            </code></pre> 
+            <p>In the above example, we stored 3 in the variable x, then we used an if statement to print True if x == 3. If we want something to happen when x does not equal 3 (the condition is not true), we would ad an else statement.</p>
+            <pre><code>
+                x = 4
+                if x == 3:
+                    print("True")
+                else:
+                    print("False")
+            </code></pre>
+            <p>Now that x == 4, the above if else statement would print "False". You can also account for additional conditions with the elif statement.</p>
+            <pre><code>
+                x = 4
+                if x == 3:
+                    print("True")
+                elif x == 4:
+                    print("Else if")
+                else:
+                    print("False")
+            </code></pre>
+            <p>Other conditions you can use include greater than (&gt;), greater than or equal to (&gt;=), less than (&lt;), less than or equal to (&lt;=) and not equals (!=). It's also important to remember that in an if statement, equals to is represented with two equal signs (==). </p>
+        </section>
+
+        <section id="loops">
+            <h2>Loops</h2>
+            <p>Loops are a very powerful and useful tool. The two loops in Python are the for and while loops.</p>
+            <h3>For Loops</h3>
+            <p>For loops iterate over a given sequence, like a range, or list. For loops are good for running a loop a set number of times.</p>
+            <pre><code>
+                for i in range(0, 5):
+                    print(i)
+            </code></pre>
+            <p>You might have noticed, it didn't print out a 5; for loops will stop one short of the end of your range. The i in the above code can be changed out for different values, like x or num for example.</p>
+            <pre><code>
+                myList = [1, 3, 7, 12, 20]
+                for x in myList:
+                    print(x)
+            </code></pre>
+            <h3>While Loops</h3>
+            <p>While loops will repeat as long as the specified boolean condition is met.</p>
+            <pre><code>
+                x = 0
+                while x &lt;= 5:
+                    print(x)
+                    x += 1
+            </code></pre>
+            <p>As you saw the above code will keep printing the value of x until x is greater than 5.While loops are great if you need to create an infinite, or never-ending loop. In a command line such as Terminal on Mac or Command Prompt on Windows, you can use ctrl + c to break and force the program to stop; in-case you get stuck in an infinite loop that you can't otherwise stop. </p>
+            <pre><code>
+                x = 0
+                while x &lt;= 5:
+                    print(x)            
+            </code></pre>
+            <p>Since the above code will never allow x to reach 5, it will loop infinitely.</p>
+            <h3>The break and continue statements</h3>
+            <p>The break statement will break you out of the loop when the specified condition is met.</p>
+            <pre><code>
+                x = 0
+                while x &lt;= 9:
+                    print(x)
+                    x += 1
+                    if x == 5:
+                        break
+
+                print("Final value:", x)
+            </code></pre>
+            <p>The continue statement is used if you want to skip the code for the current iteration, but want to continue the loop after that iteration. </p>
+            <pre><code>
+                x = 0
+                while x <= 9:
+                    print(x)
+                    x += 1
+                    if x == 5:
+                        continue
+
+                print("Final value:", x)
+            </code></pre>
+        </section>
+
+        <section id="functions">
+            <h2>Functions</h2>
+            <p>So by now you've already gotten used to calling on some functions, like <span class="keyword-style">print()</span> for example... But what if you want to make your own functions? This can be done with the <span class="keyword-style">def</span> keyword. </p>
+            <pre><code>
+                def add():
+                    num = 2 + 2
+                    print(num)
+
+                add()
+            </code></pre>
+            <p>In the above code we created a function called add: which will add 2 + 2, store it as the variable num, and print it. A function by itself will do nothing until it's called upon, which we do by referencing the function after it is defined. You can store the value returned from a function as a variable.</p>
+            <pre><code>
+                def another_function():
+                    x = 12
+                    while x > 0:
+                        print(x)
+                        x -= 1
+                    return x
+
+                y = another_function()
+
+                print(y)
+            </code></pre>
+            <p>The <span class="keyword-style">return</span> statement in the above code will return the functions result to the element that is calling it. If you do not add a return statement, or leave the value after it blank, it will return a value of <span class="keyword-style">None.</span> Any code added within the function after the return statement will be ignored. </p>
+        </section>
+
+        <section class="references">
+            <h2>References</h2>
+            <p>All the information on this page comes from:</p>
+            <ul id="references-list">
+                <li><a target="_blank" href="https://docs.python.org/3/">Python.org</a> </li>
+                <li><a target="_blank" href="https://www.w3schools.com/python/">w3schools.com</a> </li>
+                <li><a target="_blank" href="https://realpython.com/">RealPython.com</a> </li>
+            </ul>
+        </section>
+
+        </body>
+        
+        </main>
+        
+</div>
+
+</html>
