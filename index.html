@@ -5,25 +5,43 @@
     <main id="main-doc">
         
         <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Technical Documentation Page</title>
             <link href="style.css" rel="stylesheet" type="text/css">
         </head>
         
         <body>
-        <header>Python 3</header>
-        <section id="intro">
-            <h2>What is Python?</h2>
+        
+        <nav id="navbar" class="nav" role="full-horizontal">
+            <header>Python 3</header>    
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle"/>
+            <nav class="menu">
+                <ul id=nav-list>
+                    <li><a href="#intro">What is Python?</a> </li>
+                    <li><a href="#pre-reqs">Before You Begin</a> </li>
+                    <li><a href="#first-print">Your First Program</a> </li>
+                    <li><a href="#objects">Object-oriented</a> </li>
+                    <li><a href="#data-types">Data Types</a> </li>
+                    <li><a href="#if-else">If... Else</a> </li>
+                    <li><a href="#loops">Loops</a> </li>
+                    <li><a href="#functions">Functions</a> </li>
+                </ul>
+            </nav>
+        </nav>
+
+        <section id="intro" class="main-section">
+            <header>What is Python?</header>
             <p>Python is an interpreted, high-level, object-oriented programming language. Python shines at being able to create powerful, or simple, tools with fairly easy to read blocks of code known as objects. Python is both free and open-source, which has lead to users from all over the world creating a vast number of libraries and modules. This guide uses Python 3. </p>
         </section>
 
-        <section id="pre-reqs">
-            <h2>Things you may want to know before going further</h2>
+        <section id="pre-reqs" class="main-section">
+            <header>Things you may want to know before going further</header>
             <p>Overall Python can be a very beginner-friendly language, but some basic computer skills/confidence will help a lot. You should also find a resource to teach you how to either set-up an IDE, or how to run commands in your terminal. To get the most out of this guide, write the code out in your chosen environment and run it.</p>
         </section>
 
-        <section id="first-print">
-            <h2>Your first program</h2>
+        <section id="first-print" class="main-section">
+            <header>Your first program</header>
             <p>Often when you learn a new language, one of the first things you'll learn how to do is output the statement: "Hello World!" In Python this is really easy to do.</p>
             <code>
                 print("Hello World!")
@@ -31,8 +49,8 @@
             <p>That's right, it's that easy to print in Python! Keep in mind, Python is a case-sensitive language; it can cause issues with your code if you use a capital in the wrong spot. Always double check your code!</p>
         </section>
 
-        <section id="objects">
-            <h2>What does object-oriented mean</h2>
+        <section id="objects" class="main-section">
+            <header>What does object-oriented mean</header>
             <p>Object-oriented languages are great, they allow you to take chunks of code or data, and store it in different forms. One of the simplest objects you'll use in Python is a variable. </p>
             <code>
                 x = 600
@@ -54,8 +72,8 @@
             </code>
         </section>
 
-        <section id="data-types">
-            <h2>Data Types</h2>
+        <section id="data-types" class="main-section">
+            <header>Data Types</header>
             <p>Variables can store different data types, and these different data types can be called upon differently and serve different purposes. Python, and programming in general, has many data types. This guide will focus on some of the more simple types. </p>
             <ul>
                 <li>Strings: <span class="keyword-style">str</span>: Basic text. "Hello World!"</li>
@@ -65,8 +83,8 @@
             </ul>
         </section>
 
-        <section id="if-else">
-            <h2>If ... else statements</h2>
+        <section id="if-else" class="main-section">
+            <header>If ... else statements</header>
             <p>Many languages have the <span class="keyword-style">if</span> ... <span class="keyword-style">else</span> statements, some in different forms or another. If statements are a way to execute code if certain conditions are present, or to create options depending on the usage. If statements use logical conditions to function 
             </p>
             <pre><code>
@@ -74,7 +92,7 @@
                 if x == 3:
                     print("True")
             </code></pre> 
-            <p>In the above example, we stored 3 in the variable x, then we used an if statement to print True if x == 3. If we want something to happen when x does not equal 3 (the condition is not true), we would ad an else statement.</p>
+            <p>In the above example, we stored 3 in the variable x, then we used an if statement to print True if x == 3. If we want something to happen when x does not equal 3 (the condition is not true), we would add an else statement.</p>
             <pre><code>
                 x = 4
                 if x == 3:
@@ -95,8 +113,8 @@
             <p>Other conditions you can use include greater than (&gt;), greater than or equal to (&gt;=), less than (&lt;), less than or equal to (&lt;=) and not equals (!=). It's also important to remember that in an if statement, equals to is represented with two equal signs (==). </p>
         </section>
 
-        <section id="loops">
-            <h2>Loops</h2>
+        <section id="loops" class="main-section">
+            <header>Loops</header>
             <p>Loops are a very powerful and useful tool. The two loops in Python are the for and while loops.</p>
             <h3>For Loops</h3>
             <p>For loops iterate over a given sequence, like a range, or list. For loops are good for running a loop a set number of times.</p>
@@ -150,8 +168,8 @@
             </code></pre>
         </section>
 
-        <section id="functions">
-            <h2>Functions</h2>
+        <section id="functions" class="main-section">
+            <header>Functions</header>
             <p>So by now you've already gotten used to calling on some functions, like <span class="keyword-style">print()</span> for example... But what if you want to make your own functions? This can be done with the <span class="keyword-style">def</span> keyword. </p>
             <pre><code>
                 def add():
@@ -176,10 +194,10 @@
             <p>The <span class="keyword-style">return</span> statement in the above code will return the functions result to the element that is calling it. If you do not add a return statement, or leave the value after it blank, it will return a value of <span class="keyword-style">None.</span> Any code added within the function after the return statement will be ignored. </p>
         </section>
 
-        <section class="references">
-            <h2>References</h2>
+        <section class="main-section">
+            <header>References</header>
             <p>All the information on this page comes from:</p>
-            <ul id="references-list">
+            <ul id="references-list" class="ref-list">
                 <li><a target="_blank" href="https://docs.python.org/3/">Python.org</a> </li>
                 <li><a target="_blank" href="https://www.w3schools.com/python/">w3schools.com</a> </li>
                 <li><a target="_blank" href="https://realpython.com/">RealPython.com</a> </li>
@@ -193,3 +211,6 @@
 </div>
 
 </html>
+
+
+<!--Still needs navbar, keyword highlights, tons of editing.-->
