@@ -43,9 +43,10 @@ code {
     border-bottom: 1px solid black;
     box-shadow: 2px 2px lightgray;
     text-align: left;
-    height: 70px;
-    line-height: 60px;
+    height: 50px;
+    max-height: 100vh;
     position: fixed;
+    overflow: visible;
 }
 .nav ul {
    
@@ -111,7 +112,6 @@ header {
         max-width: 99vw;  
         max-height: 200px;
         overflow: visible;
-        
     }
     .menu a {
         text-align: center;
@@ -126,6 +126,7 @@ header {
         width: 25vw;
         white-space: pre;
         padding-right: 40vw;
+        margin-left: -20px;
     }
     ul#nav-list {
         min-width: 80vw;
@@ -133,8 +134,8 @@ header {
     }
     ul#nav-list li {
         display: inline;
-        border-right: 1px solid black;
-        padding: 4px 4px 4px 4px:
+        border: 1px solid black;
+        padding: 1px 1px 1px 1px;
     }
     
     #intro {
