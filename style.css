@@ -30,6 +30,7 @@ code {
     justify-content: left;
     white-space: pre-wrap;
     line-height: 1.25;
+    position: relative;
     background-color: silver;
     margin: 0 auto;
     border-radius: 2px;
@@ -123,9 +124,9 @@ header {
     }
     code {
         font-size: small;
-        width: 25vw;
+        width: 80vw;
         white-space: pre;
-        padding-right: 40vw;
+        padding-right: 39vw;
         margin-left: -20px;
     }
     ul#nav-list {
@@ -138,7 +139,6 @@ header {
         padding: 1px 1px 1px 1px;
     }
     
-    #intro {
-        padding-top: 35vh;
+    .pad-top {
+        padding-top: 15vh;
     }
-}
