@@ -47,16 +47,22 @@ code {
     line-height: 60px;
     position: fixed;
 }
+.nav ul {
+   
+}
 .nav li{
     list-style: none;
     text-align: left;
+    border-bottom: 1px solid black;
+    font-size: small;
 }
 .nav a:hover {
     color: red;
 }
 label {
     margin: 0 40px 0 0;
-    font-size: 26px;
+    font-size: 36px;
+    font-weight: bold;
     line-height: 70px;
     display: none;
     width: 26px;
@@ -99,23 +105,39 @@ header {
         cursor: pointer;
     }
     .menu {
-        text-align: center;
-        width: 100%; 
-        display: none;  
+        top: 0;
+        text-align: left;
+        display: block;
+        max-width: 99vw;  
+        max-height: 200px;
+        overflow: visible;
+        
     }
     .menu a {
-        display: block;
-        text-align: left;
+        text-align: center;
         border-bottom: 1px solid #eaeaeb;
-        margin: 0;
+        
     }
     #toggle:checked + .menu {
-        display: block;
+        display: none;
     }
     code {
         font-size: small;
         width: 25vw;
         white-space: pre;
         padding-right: 40vw;
+    }
+    ul#nav-list {
+        min-width: 80vw;
+        list-style: none;
+    }
+    ul#nav-list li {
+        display: inline;
+        border-right: 1px solid black;
+        padding: 4px 4px 4px 4px:
+    }
+    
+    #intro {
+        padding-top: 35vh;
     }
 }
